@@ -12,6 +12,8 @@ score=0
 score_section = False
 down_key_press = False
 
+pygame.mixer.music.load("music/Uplifting-and-inspiring-intro-music.mp3")
+pygame.mixer.music.play(-1)
 
 # Background image
 bg_x = 0
@@ -148,6 +150,7 @@ def main():
                 player_Y = -2222
         if showing_text:
             score_section = True
+            pygame.mixer.music.stop()
             end_text()
 
 if __name__ == '__main__':
